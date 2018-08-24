@@ -1,13 +1,13 @@
 language: php
 php:
-  - 5.6
   - 7.0
   - 7.1
+  - 7.2
 
 env:
   global:
     - CORE_BRANCH=stable13
-    - APP_NAME=files_downloadactivity
+    - APP_NAME=files_trackdownloads
   matrix:
     - DB=sqlite
 

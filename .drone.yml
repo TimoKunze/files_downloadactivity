@@ -7,7 +7,7 @@ pipeline:
   signed-off-check:
     image: nextcloudci/php7.0:php7.0-2
     environment:
-      - APP_NAME=files_downloadactivity
+      - APP_NAME=files_trackdownloads
       - CORE_BRANCH=master
       - DB=sqlite
     commands:
@@ -15,6 +15,7 @@ pipeline:
       - bash ./before_install.sh $APP_NAME $CORE_BRANCH $DB
       - cd ../server
       - php ./build/signed-off-checker.php
+    secrets: [ github_token ]
     when:
       matrix:
         TESTS: signed-off-check
