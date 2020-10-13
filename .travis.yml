@@ -9,7 +9,7 @@ services:
 
 env:
   global:
-    - CORE_BRANCH=master
+    - CORE_BRANCH=stable20
     - APP_NAME=files_trackdownloads
   matrix:
     - DB=sqlite
