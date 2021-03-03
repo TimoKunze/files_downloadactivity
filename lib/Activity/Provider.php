@@ -120,11 +120,11 @@ class Provider implements IProvider {
 		$params = $event->getSubjectParameters();
 
 		if ($params[2] === 'desktop') {
-			$subject = $this->l->t('Downloaded by {actor} (via desktop)');
+			$subject = $this->l->t('Downloaded by {actor} (IP {ip}) (via desktop)');
 		} else if ($params[2] === 'mobile') {
-			$subject = $this->l->t('Downloaded by {actor} (via app)');
+			$subject = $this->l->t('Downloaded by {actor} (IP {ip}) (via app)');
 		} else {
-			$subject = $this->l->t('Downloaded by {actor} (via browser)');
+			$subject = $this->l->t('Downloaded by {actor} (IP {ip}) (via browser)');
 		}
 
 		$this->setSubjects($event, $subject, $parsedParameters);
@@ -149,11 +149,11 @@ class Provider implements IProvider {
 		$params = $event->getSubjectParameters();
 
 		if ($params[2] === 'desktop') {
-			$subject = $this->l->t('Shared file {file} was downloaded by {actor} via the desktop client');
+			$subject = $this->l->t('Shared file {file} was downloaded by {actor} (IP {ip}) via the desktop client');
 		} else if ($params[2] === 'mobile') {
-			$subject = $this->l->t('Shared file {file} was downloaded by {actor} via the mobile app');
+			$subject = $this->l->t('Shared file {file} was downloaded by {actor} (IP {ip}) via the mobile app');
 		} else {
-			$subject = $this->l->t('Shared file {file} was downloaded by {actor} via the browser');
+			$subject = $this->l->t('Shared file {file} was downloaded by {actor} (IP {ip}) via the browser');
 		}
 
 		$this->setSubjects($event, $subject, $parsedParameters);
@@ -165,7 +165,10 @@ class Provider implements IProvider {
 
 		$event = $this->eventMerger->mergeEvents('actor', $event, $previousEvent);
 		if ($event->getChildEvent() === null) {
-			$event = $this->eventMerger->mergeEvents('file', $event, $previousEvent);
+			$event = $this->eventMerger->mergeEvents('ip', $event, $previousEvent);
+			if ($event->getChildEvent() === null) {
+				$event = $this->eventMerger->mergeEvents('file', $event, $previousEvent);
+			}
 		}
 
 		return $event;
@@ -203,6 +206,7 @@ class Provider implements IProvider {
 				return [
 					'file' => $this->generateFileParameter((int) $id, $parameters[0][$id]),
 					'actor' => $this->generateUserParameter($parameters[1]),
+					'ip' => count($parameters) > 3 ? $this->generateIpParameter($parameters[3]) : '',
 				];
 		}
 		return [];
@@ -236,6 +240,18 @@ class Provider implements IProvider {
 			'type' => 'user',
 			'id' => $uid,
 			'name' => $this->displayNames[$uid],
+		];
+	}
+
+	/**
+	 * @param string $ip
+	 * @return array
+	 */
+	protected function generateIpParameter(string $ip): array {
+		return [
+			'type' => 'ip',
+			'id' => $ip,
+			'name' => $ip,
 		];
 	}
 

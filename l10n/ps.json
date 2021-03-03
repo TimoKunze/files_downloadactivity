@@ -1,4 +1,4 @@
 { "translations": {
-    "Downloaded by {actor} (via desktop)" : "شسیبشسیب"
+    "Downloaded by {actor} (IP {ip}) (via desktop)" : "شسیبشسیب"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

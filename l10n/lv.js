@@ -1,8 +1,8 @@
 OC.L10N.register(
     "files_trackdownloads",
     {
-    "Downloaded by {actor} (via desktop)" : "Lejupielādēja {actor} (izmantojot darbavirsmu)",
-    "Shared file {file} was downloaded by {actor} via the desktop client" : "Koplietoto datni {file} lejupielādēja {actor} izmantojot darbavirsmas klientu",
+    "Downloaded by {actor} (IP {ip}) (via desktop)" : "Lejupielādēja {actor} (IP {ip}) (izmantojot darbavirsmu)",
+    "Shared file {file} was downloaded by {actor} (IP {ip}) via the desktop client" : "Koplietoto datni {file} lejupielādēja {actor} (IP {ip}) izmantojot darbavirsmas klientu",
     "A local shared file or folder was <strong>downloaded</strong>" : "Koplietotā datne vai mape tika <strong>lejupielādēta</strong>",
     "Activities for shared file downloads" : "Darbības koplietotās datnes lejupielādei"
 },

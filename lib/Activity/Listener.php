@@ -107,12 +107,13 @@ class Listener {
 
 		// Check if Current User is Guest
 		if ($this->currentUser->getUserIdentifier() === '') {
-			$requestor = 'Anonymous ' . $_SERVER['REMOTE_ADDR'];
+			$requestor = 'Anonymous';
 		} else {
-			$requestor = $this->currentUser->getUserIdentifier() . ' (IP: ' . $_SERVER['REMOTE_ADDR'] . ')';
+			$requestor = $this->currentUser->getUserIdentifier();
 		}
 
-		$subjectParams = [[$fileId => $filePath], $requestor, $client];
+		$ip = $_SERVER['REMOTE_ADDR'];
+		$subjectParams = [[$fileId => $filePath], $requestor, $client, $ip];
 
 		if ($isDir) {
 			$subject = Provider::SUBJECT_SHARED_FOLDER_DOWNLOADED;

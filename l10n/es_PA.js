@@ -1,12 +1,12 @@
 OC.L10N.register(
     "files_trackdownloads",
     {
-    "Downloaded by {actor} (via desktop)" : "Descargado por {actor} (vía el cliente de escritorio)",
-    "Downloaded by {actor} (via app)" : "Descargado por {actor} (vía la aplicación)",
-    "Downloaded by {actor} (via browser)" : "Descargado por {actor} (vía el navegador)",
-    "Shared file {file} was downloaded by {actor} via the desktop client" : "El archivo compartido {file} fue descargado por {actor} vía el cliente de escritorio",
-    "Shared file {file} was downloaded by {actor} via the mobile app" : "El archivo compartido {file} fue descargado por {actor} vía la aplicación móvil",
-    "Shared file {file} was downloaded by {actor} via the browser" : "El archivo compartido {file} fue descargado por {actor} vía el navegador",
+    "Downloaded by {actor} (IP {ip}) (via desktop)" : "Descargado por {actor} (IP {ip}) (vía el cliente de escritorio)",
+    "Downloaded by {actor} (IP {ip}) (via app)" : "Descargado por {actor} (IP {ip}) (vía la aplicación)",
+    "Downloaded by {actor} (IP {ip}) (via browser)" : "Descargado por {actor} (IP {ip}) (vía el navegador)",
+    "Shared file {file} was downloaded by {actor} (IP {ip}) via the desktop client" : "El archivo compartido {file} fue descargado por {actor} (IP {ip}) vía el cliente de escritorio",
+    "Shared file {file} was downloaded by {actor} (IP {ip}) via the mobile app" : "El archivo compartido {file} fue descargado por {actor} (IP {ip}) vía la aplicación móvil",
+    "Shared file {file} was downloaded by {actor} (IP {ip}) via the browser" : "El archivo compartido {file} fue descargado por {actor} (IP {ip}) vía el navegador",
     "A local shared file or folder was <strong>downloaded</strong>" : "Un archivo o carpeta local compartido fue <strong>descargado</strong>",
     "Activities for shared file downloads" : "Actividades para los archivos compartidos descargados"
 },

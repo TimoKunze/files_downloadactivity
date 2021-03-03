@@ -1,10 +1,10 @@
 { "translations": {
-    "Downloaded by {actor} (via desktop)" : "Преузео {actor} (преко десктоп рачунара)",
-    "Downloaded by {actor} (via app)" : "Преузео {actor} (преко апликације)",
-    "Downloaded by {actor} (via browser)" : "Преузео {actor} (преко веб читача)",
-    "Shared file {file} was downloaded by {actor} via the desktop client" : "Дељени фајл {file} је преузео {actor} преко десктоп клијента",
-    "Shared file {file} was downloaded by {actor} via the mobile app" : "Дељени фајл {file} је преузео {actor} преко мобилне апликације",
-    "Shared file {file} was downloaded by {actor} via the browser" : "Дељени фајл {file} је преузео {actor} преко веб читача",
+    "Downloaded by {actor} (IP {ip}) (via desktop)" : "Преузео {actor} (IP {ip}) (преко десктоп рачунара)",
+    "Downloaded by {actor} (IP {ip}) (via app)" : "Преузео {actor} (IP {ip}) (преко апликације)",
+    "Downloaded by {actor} (IP {ip}) (via browser)" : "Преузео {actor} (IP {ip}) (преко веб читача)",
+    "Shared file {file} was downloaded by {actor} (IP {ip}) via the desktop client" : "Дељени фајл {file} је преузео {actor} (IP {ip}) преко десктоп клијента",
+    "Shared file {file} was downloaded by {actor} (IP {ip}) via the mobile app" : "Дељени фајл {file} је преузео {actor} (IP {ip}) преко мобилне апликације",
+    "Shared file {file} was downloaded by {actor} (IP {ip}) via the browser" : "Дељени фајл {file} је преузео {actor} (IP {ip}) преко веб читача",
     "A local shared file or folder was <strong>downloaded</strong>" : "Локална дељена фасцикла је <strong>преузета</strong>",
     "Activities for shared file downloads" : "Активности преузимања дељеног фајла",
     "Creates activities for downloads of files that were shared with other users or a group" : "Креира активности за скидање фајлова који су дељени са осталим корисницима или групом"
